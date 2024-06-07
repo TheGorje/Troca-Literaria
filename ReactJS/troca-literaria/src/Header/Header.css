@@ -1,0 +1,50 @@
+.H-container{
+    background-color: var(--background);
+
+    height: 60px;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    box-shadow: 0px 0px 10px 1px black;
+}
+
+
+
+.H-Center{
+    display: grid;
+    user-select: none;
+    align-items: center;
+    justify-items: center;
+
+    height: 50px;
+    width: 40%;
+}
+.H-Center-Container{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    align-items: center;
+}
+.H-Center-Logo{
+    height: 30px;
+    width: auto;
+    fill: var(--accent);
+}
+.H-Center-Text-Name{
+    color: var(--accent);
+}
+
+@media (max-width: 530px) {
+    .H-Center-Logo {
+        height: 40px;
+    }
+    .H-Center-Text-Name{
+        display: none;
+    }
+}

@@ -1,0 +1,30 @@
+.C-UF-container-all {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    
+}
+.C-UF-container{
+    position: relative;
+    width: fit-content;
+}
+.C-UF-counter{
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    color: var(--accent);
+    font-size: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px var(--background-3);
+}
+.C-UF-name{
+    background-color: var(--background);
+    padding: 6px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+

@@ -1,0 +1,32 @@
+.S-Container-Tab{
+    display: flex;
+}
+.S-Tab-Button{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--text);
+    color: var(--text);
+    letter-spacing: 0.1mm;
+    cursor: pointer;
+    padding: 10px 15px;
+
+    font-size: medium;
+    opacity: 0.5;
+    transition: 0.5s ease;
+}
+.S-Tab-Button:hover{
+    opacity: 0.8;
+}
+.S-Tab-Actived{
+    opacity: 1;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transition: color 0.2s ease, border-bottom 0.5s ease;
+}
+
+
+@media (max-width: 850px) {
+    .S-Tab-Button {
+        padding: 10px 10px;
+    }
+}

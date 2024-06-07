@@ -1,0 +1,40 @@
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --text: #edf2f3;
+    --background: #0e191b;
+    --background-2: #162022;
+    --background-3: #16333b;
+    --primary: #a1ccd9;
+    --secondary: #297285;
+    --accent: #4fbfd8;
+    --red: #d84f4f;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+
+a{
+    text-decoration: none;
+    color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+

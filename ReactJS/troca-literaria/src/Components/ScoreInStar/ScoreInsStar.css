@@ -1,0 +1,19 @@
+.C-SIS-star-rating {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    color: var(--text);
+}
+
+.C-SIS-star-rating-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--accent);
+}
+
+.C-SIS-star-rating-bottom {
+    color: var(--text);
+}

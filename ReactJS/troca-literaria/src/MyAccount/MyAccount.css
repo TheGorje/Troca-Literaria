@@ -1,0 +1,358 @@
+.MA-main-container{
+    display: grid;
+    justify-content: center;
+}
+
+.MA-container-all{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+.MA-left{
+    width: 200px;
+    background-color: var(--background-2);
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+}
+.MA-myPerfil{
+    width: 200px;
+    height: auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.MA-perfil{
+    user-select: none;
+    transition: 0.2s ease-in-out;
+    width: 70px;
+    height: 70px;
+    border: 2px double var(--accent);
+    border-radius: 50%;
+}
+.MA-perfil-photo{
+    user-select: none;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.MA-profile-icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    background-color: var(--background-3);
+    overflow: hidden;
+}
+.MA-profile-icon:before {
+    content: "";
+    position: absolute;
+    top: 23%;
+    left: 27%;
+    width: 46%;
+    height: 46%;
+    border-radius: 50%;
+    background-color: var(--text);
+}
+.MA-profile-icon:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+    width: 84%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+.MA-left-select-container{
+    display: grid;
+    gap: 10px;
+}
+.MA-left-select{
+    user-select: none;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    background-color: var(--background-2);
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    text-shadow: 0px 0px 5px black;
+}
+.MA-left-select:hover{
+    background-color: var(--background-3);
+}
+.MA-left-select:active{
+    transition: 0ms;
+    background-color: var(--accent);
+}
+
+
+
+
+.MA-right{
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+    width: 50vw;
+}
+
+.MA-cadastre-container{
+    width: 50vw;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+
+    border: 2px solid var(--background-3);
+    border-radius: 10px;
+}
+.MA-cadastre-change{
+    cursor: pointer;
+    color: var(--accent);
+    transition: 0.2s ease-in-out;
+    opacity: 0.5;
+}
+.MA-cadastre-change:hover{
+    color: var(--accent);
+    opacity: 1;
+}
+.MA-cadastre-input{
+    position: sticky;
+    z-index: 5;
+    transition: 0.2s ease-in;
+    color: var(--text);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--text);
+    border-radius: 0;
+    outline: none;
+    height: 2rem;
+    width: 100%;
+    font-size: 18px;
+}
+.MA-cadastre-button-confirm{
+    transition: background-color 0.2s ease-out;
+    cursor: pointer;
+    height: 30px;
+    font-size: 16px;
+    border: 1px solid var(--accent);
+    color: var(--text);
+    text-shadow: 0px 0px 4px black;
+    border-radius: 12px;
+    background-color: transparent;
+}
+.MA-cadastre-button-confirm:hover{
+    background-color: var(--accent);
+}
+.MA-cadastre-button-cancel{
+    transition: background-color 0.2s ease-out;
+    cursor: pointer;
+    height: 30px;
+    font-size: 16px;
+    border: 1px solid var(--red);
+    color: var(--text);
+    text-shadow: 0px 0px 4px black;
+    border-radius: 12px;
+    background-color: transparent;
+}
+.MA-cadastre-button-cancel:hover{
+    background-color: var(--red);
+}
+
+.MA-DeleteAccount-container{
+    width: 50vw;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+
+    border: 2px solid var(--background-3);
+    border-radius: 10px;
+}
+.MA-DeleteAccount-warning{
+    height: 30px;
+    width: 30px;
+    fill: var(--red);
+}
+
+
+.MA-tradeCard-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+}
+.MA-card-container-all{
+    background-color: var(--background-2);
+    display: grid;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-out;
+    width: 350px;
+}
+.MA-card-container-all:hover{
+    background-color: var(--background-3);
+}
+.MA-card-container-all:hover .MA-icon,
+.MA-card-container-all:hover .MA-user-img-container,
+.MA-card-container-all:hover .MA-perfil-container,
+.MA-card-container-all:hover .MA-card-img-container{
+    opacity: 1;
+    border-color: var(--accent);
+}
+.MA-card-container{
+    display: flex;
+    justify-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.MA-star-rating {
+    font-size: 24px;
+}
+.MA-star {
+    cursor: pointer;
+    user-select: none;
+    color: var(--background);
+}
+.MA-star.selected {
+    color: var(--accent);
+}
+
+.MA-card-review-feedback-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.MA-card-review-feedback{
+    background-color: var(--background);
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s ease-out;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 0px 0px 2px black;
+}
+.MA-card-review-feedback:hover{
+    background-color: var(--secondary);
+}
+.MA-card-review-feedback:active{
+    transition: 0s;
+    background-color: var(--accent);
+}
+
+.MA-card-img-container{
+    user-select: none;
+    cursor: pointer;
+    width: 140px;
+    height: 200px;
+    border: 2px solid var(--background);
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: 0.2s ease-in-out;
+}
+.MA-card-img{
+    user-select: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.MA-user-name{
+    transition: 0.2s ease-out;
+}
+.MA-user-name:hover{
+    color: var(--accent);
+}
+.MA-details-container{
+    text-align: center;
+    height: 100%;
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+    align-content: space-evenly;
+}
+.MA-user-img-container{
+    user-select: none;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--background);
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: 0.2s ease-in-out;
+}
+.MA-user-img{
+    user-select: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.MA-selection-yes, .MA-selection-no{
+    width: 50%;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s ease-out;
+    display: grid;
+    height: 35px;
+    justify-items: center;
+    align-items: center;
+}
+.MA-selection-yes{
+    border-bottom-left-radius: 10px;
+}
+.MA-selection-no{
+    border-bottom-right-radius: 10px;
+}
+.MA-selection-yes:hover{
+    background-color: var(--accent);
+}
+.MA-selection-no:hover{
+    background-color: var(--red);
+}
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    .MA-main-container{
+        justify-content: normal;
+    }
+    .MA-container-all {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .MA-left{
+        place-self: center;
+    }
+    .MA-right{
+        width: auto;
+    }
+    .MA-DeleteAccount-container, .MA-cadastre-container{
+        width: auto;
+    }
+}

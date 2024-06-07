@@ -1,0 +1,31 @@
+.C-SB-input{
+    position: relative;
+}
+.C-SB-input input{
+    position: sticky;
+    z-index: 5;
+    transition: 0.2s ease-in;
+    color: var(--text);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--text);
+    border-radius: 0;
+    outline: none;
+    height: 2rem;
+    width: 100%;
+    font-size: 18px;
+}
+.C-SB-input input:focus {
+    border-color: var(--accent);
+}
+.C-SB-input h2{
+    transition: 0.2s ease-in-out;
+}
+
+.C-SB-books-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+}

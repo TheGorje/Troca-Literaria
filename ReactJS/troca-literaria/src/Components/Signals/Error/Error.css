@@ -1,0 +1,32 @@
+.C-Error-container{
+    padding: 20px;
+    background-color: var(--red);
+    border-radius: 50%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    animation: container_in 0.6s ease-in;
+}
+.C-Error-icon{
+    font-weight: bolder;
+    color: var(--text);
+}
+
+.C-Error-text{
+    animation: text_in 0.8s ease-in ;
+    text-align: center;
+    color: var(--red);
+}
+
+@keyframes container_in {
+    0% { transform: rotate(-10deg); }
+    20% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(10deg); }
+    80% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes text_in {
+    0% {opacity: 0}
+}

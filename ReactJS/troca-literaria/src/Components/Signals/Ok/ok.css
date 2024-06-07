@@ -1,0 +1,33 @@
+.C-OK-container{
+    padding: 20px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    animation: container_in 0.4s ease-in;
+
+}
+.C-OK-icon{
+    font-weight: bolder;
+    color: var(--text);
+    animation: ok_in 0.4s ease-in ;
+}
+
+.C-OK-text{
+    animation: text_in 0.8s ease-in;
+    text-align: center;
+    color: var(--accent);
+}
+
+@keyframes ok_in {
+    0% {font-size: 0px; rotate: 50deg;}
+}
+
+@keyframes container_in {
+    0% {width: 0%; height: 0%;}
+}
+
+@keyframes text_in {
+    0% {opacity: 0}
+}

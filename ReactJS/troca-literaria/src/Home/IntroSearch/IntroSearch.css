@@ -1,0 +1,96 @@
+.IS-Background{
+    width: 100%;
+    background-color: var(--secondary);
+}
+.IS-Container-Itens{
+    display: flex;
+    gap: 10%;
+    padding: 20px 70px 20px 70px;
+    height: 400px;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.IS-Container-Left{
+    display: grid;
+    align-content: center;
+    gap: 10px;
+}
+.IS-Left-Link{
+    user-select: none;
+    text-decoration: none;
+    color: var(--text);
+    text-align: center;
+    place-self: center;
+}
+.IS-Left-Button{
+    transition: background-color 0.2s ease-out;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    font-size: 22px;
+    color: var(--text);
+    border-radius: 12px;
+    border: 1px solid var(--background);
+    background-color: var(--background);
+}
+.IS-Left-Button:hover{
+    border: 1px solid var(--secondary);
+    background-color: var(--background-3);
+}
+.IS-Left-Button:active{
+    transition: 0s;
+    background-color: var(--accent);
+}
+.IS-Left-Text{
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--background);
+    font-weight: bold;
+}
+
+.IS-Container-Right{
+    display: grid;
+    justify-items: center;
+    position: relative;
+}
+.IS-Right-Image-Container-All{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    width: 320px;
+    height: 320px;
+}
+.IS-Right-Image-Container{
+    position: absolute;
+    bottom: -27px;
+    z-index: 3;
+}
+.IS-Right-Image{
+    width: 100%;
+    height: 100%;
+    filter: saturate(0.6) hue-rotate(357deg);
+}
+.IS-Right-Image-Background{
+    background-color: var(--background-2);
+    width: 345px;
+    height: 345px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    bottom: -5px;
+}
+
+@media (max-width: 850px) {
+    .IS-Container-Right {
+        display: none;
+    }
+    .IS-Container-Itens{
+        height: auto;
+        padding: 10px;
+    }
+    .IS-Left-Text{
+        color: var(--background);
+    }
+}

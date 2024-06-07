@@ -1,0 +1,162 @@
+.H-End{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    z-index: 20;
+}
+
+.HE-Perfil-Container{
+    display: grid;
+}
+.HE-Perfil-Open-Modal{
+    /* display: none;  */
+    animation: modal-in 0.2s ease-in-out;
+    position: fixed;
+    z-index: 19;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    opacity: 0.4;
+}
+@keyframes modal-in {
+    0% {opacity: 0;}
+}
+.HE-Perfil-Image-container{
+    user-select: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    width: 48px;
+    height: 48px;
+    border: 2px double var(--background-3);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+.HE-Perfil-Image-container:hover{
+    border-color: var(--text);
+    opacity: 1;
+}
+.HE-Perfil-Image{
+    border: 0px;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.HE-profile-icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    background-color: var(--background-3);
+    overflow: hidden;
+}
+.HE-profile-icon:before {
+    content: "";
+    position: absolute;
+    top: 23%;
+    left: 27%;
+    width: 46%;
+    height: 46%;
+    border-radius: 50%;
+    background-color: var(--text);
+}
+.HE-profile-icon:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+    width: 84%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+.HE-profile-icon.unknown::after {
+    background-color: var(--text);
+}
+
+
+.HE-Perfil-Open-Container{
+    z-index: 20;
+    background-color: var(--background);
+    position: absolute;
+    border-radius: 10px;
+    top: 70px;
+    width: 300px;
+    right: 20px;
+    display: grid;
+    box-shadow: 0px 7px 15px 1px black;
+}
+.HE-Perfil-Open-Principal{
+    transition: background-color 0.2s ease-out;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+}
+.HE-Perfil-Open-Principal:hover{
+    background-color: var(--background-2);
+    border-radius: 10px;
+}
+.HE-Perfil-Mark{
+    border-style: solid;
+    border-width: 1.4px 1.4px 0 0;
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    position: relative;
+    transform: rotate(45deg);
+    color: var(--accent);
+    margin-bottom: 0.7px;
+}
+
+.HE-Perfil-Open-Item, .HE-Perfil-Open-Exit-Container, .HE-Perfil-Open-Item-Anunciar-Container{
+    user-select: none;
+    transition: background-color 0.1s ease-out;
+    cursor: pointer;
+    height: 50px;
+    display: grid;
+    align-content: center;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+.HE-Perfil-Open-Item:hover,
+.HE-Perfil-Open-Item-Anunciar-Container:hover,
+.HE-Perfil-Open-Exit-Container:hover
+{
+   background-color: var(--background-2);
+   border-radius: 10px;
+}
+.HE-Perfil-Open-Item:active, .HE-Perfil-Open-Item-Anunciar-Container:active{
+    background-color: var(--accent);
+}
+
+
+.HE-Perfil-Open-Item-Anunciar-Container:active .HE-Perfil-Open-Item-Anunciar{
+    color: var(--text);
+}
+.HE-Perfil-Open-Item-Anunciar{
+    text-align: center;
+    color: var(--accent);
+}
+
+
+.HE-Perfil-Open-Exit{
+    transition: 0.2s ease-in-out;
+}
+.HE-Perfil-Open-Exit-Container:active{
+    background-color: var(--red);
+}
+.HE-Perfil-Open-Exit-Container:hover > .HE-Perfil-Open-Exit{
+    color: var(--red);
+}
+.HE-Perfil-Open-Exit-Container:active > .HE-Perfil-Open-Exit{
+    color: var(--text);
+}
