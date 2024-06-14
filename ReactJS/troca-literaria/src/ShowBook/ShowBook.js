@@ -437,121 +437,127 @@ function BookPage() {
     }
 
 
-    return (
+return (
         <>
             <Header/>
             <br/>
             {((BookInfos !== null && BookInfos !== 404) && UserInfos !== null) ?
                 (
-                <div className='SB-main-container'>
-                    <div className='SB-container-all'>
+                    BookInfos?.isActive ? 
+                        <div className='SB-main-container'>
+                            <div className='SB-container-all'>
 
-                        <div className='SB-left'>
-                            { parseInt(BookInfos.user_id) === parseInt(User?.Id ) &&
-                                <Link to={`/addBook/${BookInfos.id}`}>
-                                    <SvgEdit className='SB-left-SvgEdit'/>
-                                </Link>
-                            }
-
-                            <h1 style={{textAlign: 'center'}}> {BookInfos['title']} </h1>
-                            <h5 style={{opacity: '0.6'}}>Publicado em: { FormatDate(BookInfos['created_at'], 'date') } as { FormatDate(BookInfos['created_at'], 'hours')}</h5>
-
-                            <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
-
-                            <ShowImages />
-                            <div style={{display: 'flex', justifyContent: 'center',flexWrap: 'wrap', gap: '10px'}}>
-                                {BookInfos['genres'].map((item, i)=>{
-                                    return(
-                                        <Link to={`/search/genre/${item}`} className='SB-genre-item' key={i}>
-                                            {_genre[item]}
+                                <div className='SB-left'>
+                                    {parseInt(BookInfos.user_id) === parseInt(User?.Id) &&
+                                        <Link to={`/addBook/${BookInfos.id}`}>
+                                            <SvgEdit className='SB-left-SvgEdit' />
                                         </Link>
-                                    )
-                                })}
+                                    }
 
-                            </div>
+                                    <h1 style={{ textAlign: 'center' }}> {BookInfos['title']} </h1>
+                                    <h5 style={{ opacity: '0.6' }}>Publicado em: {FormatDate(BookInfos['created_at'], 'date')} as {FormatDate(BookInfos['created_at'], 'hours')}</h5>
 
-                            <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
+                                    <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
 
-                            <h4>
-                                {BookInfos['description']}
-                            </h4>
+                                    <ShowImages />
+                                    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
+                                        {BookInfos['genres'].map((item, i) => {
+                                            return (
+                                                <Link to={`/search/genre/${item}`} className='SB-genre-item' key={i}>
+                                                    {_genre[item]}
+                                                </Link>
+                                            )
+                                        })}
 
-                            <br/>
-                            <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
+                                    </div>
 
-                            { BookInfos['user_description'].length >=1 && 
-                            <>
-                                <h2>Comentário</h2>
-                                <h4 style={{opacity: '0.6'}}>
-                                    {BookInfos['user_description']}
-                                </h4>
+                                    <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
 
-                                <br/>
-                                <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
-                            </>
-                            }
+                                    <h4>
+                                        {BookInfos['description']}
+                                    </h4>
 
-                            <h2>
-                                Detalhes
-                            </h2>
-                            <div className='SB-details-container'>
-                                <div style={{display: 'grid', gap: '10px'}}>
-                                    <h4 style={{ color: 'var(--text)'}}>Título: <span style={{color: 'var(--accent)' }}>{BookInfos.title}</span></h4>
-                                    <h4 style={{ color: 'var(--text)'}}>Autor(es): <span style={{color: 'var(--accent)' }}>{BookInfos.author}</span></h4>
-                                    <h4 style={{ color: 'var(--text)'}}>Condição Do Livro: <span style={{color: 'var(--accent)' }}>{BookInfos.book_condition}</span></h4>
-                                    <h4 style={{ color: 'var(--text)'}}>Idioma: <span style={{color: 'var(--accent)' }}>{BookInfos.lang}</span></h4>
+                                    <br />
+                                    <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
+
+                                    {BookInfos['user_description'].length >= 1 &&
+                                        <>
+                                            <h2>Comentário</h2>
+                                            <h4 style={{ opacity: '0.6' }}>
+                                                {BookInfos['user_description']}
+                                            </h4>
+
+                                            <br />
+                                            <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
+                                        </>
+                                    }
+
+                                    <h2>
+                                        Detalhes
+                                    </h2>
+                                    <div className='SB-details-container'>
+                                        <div style={{ display: 'grid', gap: '10px' }}>
+                                            <h4 style={{ color: 'var(--text)' }}>Título: <span style={{ color: 'var(--accent)' }}>{BookInfos.title}</span></h4>
+                                            <h4 style={{ color: 'var(--text)' }}>Autor(es): <span style={{ color: 'var(--accent)' }}>{BookInfos.author}</span></h4>
+                                            <h4 style={{ color: 'var(--text)' }}>Condição Do Livro: <span style={{ color: 'var(--accent)' }}>{BookInfos.book_condition}</span></h4>
+                                            <h4 style={{ color: 'var(--text)' }}>Idioma: <span style={{ color: 'var(--accent)' }}>{BookInfos.lang}</span></h4>
+                                        </div>
+
+                                        <div style={{ display: 'grid', gap: '10px' }}>
+                                            <h4 style={{ color: 'var(--text)' }}>Quantidade De Páginas: <span style={{ color: 'var(--accent)' }}>{BookInfos.pags}</span></h4>
+                                            <h4 style={{ color: 'var(--text)' }}>Ano De Publicação: <span style={{ color: 'var(--accent)' }}>{BookInfos.year}</span></h4>
+                                            <h4 style={{ color: 'var(--text)' }}>Tipo: <span style={{ color: 'var(--accent)' }}>{BookInfos.type}</span></h4>
+                                            <h4 style={{ color: 'var(--text)' }}>Gêneros: <span style={{ color: 'var(--accent)' }}>{BookInfos.genres.map((item) => { return _genre[item] }).join(', ')}</span></h4>
+                                        </div>
+                                    </div>
+
+                                    <br />
+
+                                    {SimilarBooks.length >= 1 &&
+                                        <>
+                                            <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
+                                            <h2> Livros Semelhantes </h2>
+                                            <FlickitySliderSimilar />
+
+                                            <br />
+                                        </>
+                                    }
+                                    {CategoryBooks.length >= 1 &&
+                                        <>
+                                            <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
+
+                                            <h2> Mesma Categoria </h2>
+                                            <FlickitySliderCategory />
+
+                                            <br />
+                                        </>
+                                    }
+
                                 </div>
 
-                                <div style={{display: 'grid', gap: '10px'}}>
-                                    <h4 style={{ color: 'var(--text)'}}>Quantidade De Páginas: <span style={{ color: 'var(--accent)' }}>{BookInfos.pags}</span></h4>
-                                    <h4 style={{ color: 'var(--text)'}}>Ano De Publicação: <span style={{color: 'var(--accent)' }}>{BookInfos.year}</span></h4>
-                                    <h4 style={{ color: 'var(--text)'}}>Tipo: <span style={{color: 'var(--accent)' }}>{BookInfos.type}</span></h4>
-                                    <h4 style={{ color: 'var(--text)'}}>Gêneros: <span style={{color: 'var(--accent)' }}>{BookInfos.genres.map((item) => { return _genre[item] }).join(', ')}</span></h4>
+                                <div style={{ display: 'grid', justifyContent: 'center' }}>
+                                    <div className='SB-right'>
+                                        <SellerPerfil />
+                                    </div>
+
+                                    <div className='SB-moreBooksUser'>
+                                        {UserBooksEXTRA.length >= 1 && (<UserBooks />)}
+                                    </div>
+
                                 </div>
-                            </div>
 
-                            <br/>
+                                <div className='SB-top'>
+                                    <SellerPerfilTop />
+                                </div>
 
-                            {SimilarBooks.length >= 1  &&
-                            <>
-                                <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
-                                <h2> Livros Semelhantes </h2>
-                                <FlickitySliderSimilar />
-
-                                <br/>
-                            </>
-                            }
-                            {CategoryBooks.length >= 1  &&
-                            <>
-                                <line style={{ width: '100%', height: '2px', backgroundColor: 'var(--background)' }} />
-
-                                <h2> Mesma Categoria </h2>
-                                <FlickitySliderCategory />
-
-                                <br />
-                            </>
-                            }
-
-                        </div>
-
-                        <div style={{display: 'grid', justifyContent: 'center'}}>
-                            <div className='SB-right'>
-                                <SellerPerfil />
-                            </div>
-
-                            <div className='SB-moreBooksUser'>
-                                {UserBooksEXTRA.length >= 1 && ( <UserBooks />)}
                             </div>
 
                         </div>
-
-                        <div className='SB-top'>
-                            <SellerPerfilTop />
-                        </div>
-
+                :
+                    <div style={{ display: 'grid', gap: '10px' }}>
+                        <h1 style={{ textAlign: 'center', color: 'var(--red)' }} >Livro Inativo</h1>
+                        <h1 style={{ textAlign: 'center' }} >Este livro foi desativado pelo usuário</h1>
                     </div>
-
-                </div>
                 )
                 :
                 BookInfos === 404 ?
